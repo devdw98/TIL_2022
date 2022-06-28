@@ -1,1 +1,4 @@
-# TIL_2022
+# 2022
+- [ ] docker
+- [ ] kubernetes
+- [ ] socket server

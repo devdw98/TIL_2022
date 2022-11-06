@@ -1,10 +1,23 @@
 package main
 
 import (
+	"bufio"
 	"fmt"
 	"math/rand"
+	"os"
 	"time"
 )
+
+var stdin = bufio.NewReader(os.Stdin)
+
+func inputValue() (int, error) {
+	var num int
+	_, err := fmt.Scanf("%d\n", &num)
+	if err != nil {
+		stdin.ReadString('\n') // 입력 스트림 비워줌
+	}
+	return num, err
+}
 
 func main() {
 	rand.Seed(time.Now().UnixNano()) // 시간 값을 랜덤 시드로 설정
@@ -14,8 +27,7 @@ func main() {
 	for {
 		var num int
 		fmt.Print("숫자값을 입력하세요: ")
-		_, err := fmt.Scanf("%d\n", &num)
-
+		num, err := inputValue()
 		count++
 		if err != nil {
 			fmt.Println("잘못된 값입니다. error : " + err.Error())

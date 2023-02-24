@@ -1,0 +1,10 @@
+FROM golang:1.19 AS builder
+
+WORKDIR /
+
+COPY . .
+
+ENV CGO_ENABLED=0
+
+# install delve for debugging
+RUN go get -u github.com/go-delve/delve/cmd/dlv

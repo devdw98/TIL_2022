@@ -82,7 +82,7 @@ dkms.conf
 #*
 
 # Unignore all with extensions
-!*.*
+#!*.*
 
 # Unignore all dirs
 #!*/

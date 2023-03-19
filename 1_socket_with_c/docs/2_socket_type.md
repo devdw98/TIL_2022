@@ -23,3 +23,4 @@ int socket(int domain, int type, int protocol);
 
 ### protocol: 통신에 사용되는 프로토콜 정보
 - domain 에서 지정한 프로토콜 체계 범위 내에서 결정되어야 함
+- 하나의 프로토콜 체계 안에서 데이터 전송 방식이 동일한 프로토콜이 둘 이상 존재할 수도 있어서 해당 인자를 통해 구분함

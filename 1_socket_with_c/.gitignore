@@ -85,4 +85,4 @@ dkms.conf
 !*.*
 
 # Unignore all dirs
-!*/
+#!*/

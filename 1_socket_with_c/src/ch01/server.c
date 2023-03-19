@@ -4,8 +4,7 @@
 #include <sys/socket.h>
 #include <unistd.h>
 #include <arpa/inet.h>
-
-void error_handling(char *message);
+#include "../lib/err.h"
 
 int main(int argc, char *argv[])
 {
@@ -47,11 +46,4 @@ int main(int argc, char *argv[])
     close(client_socket);
     close(server_socket);
     return 0;
-}
-
-void error_handling(char *message)
-{
-    fputs(message, stderr);
-    fputc('\n', stderr);
-    exit(1);
 }

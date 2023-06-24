@@ -6,5 +6,3 @@
         ```
         go mod tidy
         ```
-### go mod
-- 
